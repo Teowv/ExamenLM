@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-El document xsd estarà ben format (0.5 punts)
-El document xml validarà bé amb el xsd: passarà la validació amb xmllint (1 punt)
-El document xsd ha de representar correctament els xml que volem poder crear (1 punt)
-El codi està ben ordenat (0.5 punts)
-Has d'emprar bé els espais de noms (0.5 punts)
-Has de controlar bé les ocurrències amb minOccurs i maxOcurrs (0.5 punts)
-L'ELEMENT 'TIPUSCLIENT' NOMÉS HA D'ADMETRE UN D'AQUESTS VALORS: PREMIUM, HABITUAL O OCASIONAL (0.5 PUNTS): DONE
-L'ELEMENT 'TELEFON' HA DE SER UN NÚMERO ENTER ENTRE 971230000 I 971239999 (0.5 PUNTS): DONE
-POTS EMPRAR USE="REQUIRED" PER A DEFINIR QUE L'ATRIBUT 'TRACTAMENT' DE L'ELEMENT 'NOM' ÉS OBLIGATORI (0.5 PUNTS): DONE
-CREARÀS UN TIPUS PROPI SIMPLE AMB UNA ENUMERACIÓ QUE NOMÉS PERMETRÀ AQUESTS VALORS: SI, NO O OPCIONAL (0.5 PUNTS) I HAS D'APLICAR-HO A TOTS ELS ELEMENTS DINS 'EQUIPACIO' (0.25 PUNTS): DONE
-CREARÀS UN TIPUS PROPI SIMPLE AMB UN PATRÓ QUE NOMÉS PERMETRÀ AQUESTS VALORS: SR O SRA (0.5 PUNTS). HO EMPRARÀS A L'ATRIBUT 'TRACTAMENT' DE L'ELEMENT 'NOM' (0.25 PUNTS): DONE
-L'atribut 'matricula' dels cotxes ha de ser una key (0.5 punts)
-L'element 'cotxe' dels lloguers ha de ser una keyref (0.5 punts)
-Pots entregar un xml amb nom lloguerNoValid.xml que no validi perquè hi hagin dades que no compleixen els requeriments del xsd. P.e. un telèfon que no compleixi les condicions que hem possat (0.5 punts)
-Pots entregar un xml amb nom lloguerNoKey.xml que no validi perquè una keyref apunti a un valor de la key que no existeixi (0.5 punts)
-Cerca per internet un patró per validar un email a xsd i aplica-ho a l'element 'email' (1 punt)
-Has de crear un projecte amb git, fer-hi com a mínim 5 commits (amb missatge prou descriptiu), pujar-lo a Github i deixar aquí l'enllaç.
--->
-<lloguerCotxes xmlns="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
+<lloguerCotxes 
+xmlns="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.iessonferrer.net/jgonzalez/lloguerCotxes lloguer.xsd">
 
@@ -80,3 +62,23 @@ xsi:schemaLocation="http://www.iessonferrer.net/jgonzalez/lloguerCotxes lloguer.
 </client>
 
 </lloguerCotxes>
+
+<!--
+El document xsd estarà ben format (0.5 punts)
+El document xml validarà bé amb el xsd: passarà la validació amb xmllint (1 punt)
+El document xsd ha de representar correctament els xml que volem poder crear (1 punt)
+El codi està ben ordenat (0.5 punts)
+Has d'emprar bé els espais de noms (0.5 punts)
+Has de controlar bé les ocurrències amb minOccurs i maxOcurrs (0.5 punts)
+L'ELEMENT 'TIPUSCLIENT' NOMÉS HA D'ADMETRE UN D'AQUESTS VALORS: PREMIUM, HABITUAL O OCASIONAL (0.5 PUNTS): DONE
+L'ELEMENT 'TELEFON' HA DE SER UN NÚMERO ENTER ENTRE 971230000 I 971239999 (0.5 PUNTS): DONE
+POTS EMPRAR USE="REQUIRED" PER A DEFINIR QUE L'ATRIBUT 'TRACTAMENT' DE L'ELEMENT 'NOM' ÉS OBLIGATORI (0.5 PUNTS): DONE
+CREARÀS UN TIPUS PROPI SIMPLE AMB UNA ENUMERACIÓ QUE NOMÉS PERMETRÀ AQUESTS VALORS: SI, NO O OPCIONAL (0.5 PUNTS) I HAS D'APLICAR-HO A TOTS ELS ELEMENTS DINS 'EQUIPACIO' (0.25 PUNTS): DONE
+CREARÀS UN TIPUS PROPI SIMPLE AMB UN PATRÓ QUE NOMÉS PERMETRÀ AQUESTS VALORS: SR O SRA (0.5 PUNTS). HO EMPRARÀS A L'ATRIBUT 'TRACTAMENT' DE L'ELEMENT 'NOM' (0.25 PUNTS): DONE
+L'atribut 'matricula' dels cotxes ha de ser una key (0.5 punts)
+L'element 'cotxe' dels lloguers ha de ser una keyref (0.5 punts)
+Pots entregar un xml amb nom lloguerNoValid.xml que no validi perquè hi hagin dades que no compleixen els requeriments del xsd. P.e. un telèfon que no compleixi les condicions que hem possat (0.5 punts)
+Pots entregar un xml amb nom lloguerNoKey.xml que no validi perquè una keyref apunti a un valor de la key que no existeixi (0.5 punts)
+Cerca per internet un patró per validar un email a xsd i aplica-ho a l'element 'email' (1 punt)
+Has de crear un projecte amb git, fer-hi com a mínim 5 commits (amb missatge prou descriptiu), pujar-lo a Github i deixar aquí l'enllaç.
+-->
