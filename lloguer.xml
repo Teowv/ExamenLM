@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+El document xsd estarà ben format (0.5 punts)
+El document xml validarà bé amb el xsd: passarà la validació amb xmllint (1 punt)
+El document xsd ha de representar correctament els xml que volem poder crear (1 punt)
+El codi està ben ordenat (0.5 punts)
+Has d'emprar bé els espais de noms (0.5 punts)
+Has de controlar bé les ocurrències amb minOccurs i maxOcurrs (0.5 punts)
+L'element 'tipusClient' només ha d'admetre un d'aquests valors: Premium, Habitual o Ocasional (0.5 punts)
+L'element 'telefon' ha de ser un número enter entre 971230000 i 971239999 (0.5 punts)
+Pots emprar use="required" per a definir que l'atribut 'tractament' de l'element 'nom' és obligatori (0.5 punts)
+Crearàs un tipus propi simple amb una enumeració que només permetrà aquests valors: Si, No o Opcional (0.5 punts) i has d'aplicar-ho a tots els elements dins 'equipacio' (0.25 punts)
+Crearàs un tipus propi simple amb un patró que només permetrà aquests valors: Sr o Sra (0.5 punts). Ho empraràs a l'atribut 'tractament' de l'element 'nom' (0.25 punts)
+L'atribut 'matricula' dels cotxes ha de ser una key (0.5 punts)
+L'element 'cotxe' dels lloguers ha de ser una keyref (0.5 punts)
+Pots entregar un xml amb nom lloguerNoValid.xml que no validi perquè hi hagin dades que no compleixen els requeriments del xsd. P.e. un telèfon que no compleixi les condicions que hem possat (0.5 punts)
+Pots entregar un xml amb nom lloguerNoKey.xml que no validi perquè una keyref apunti a un valor de la key que no existeixi (0.5 punts)
+Cerca per internet un patró per validar un email a xsd i aplica-ho a l'element 'email' (1 punt)
+Has de crear un projecte amb git, fer-hi com a mínim 5 commits (amb missatge prou descriptiu), pujar-lo a Github i deixar aquí l'enllaç.
+-->
+<lloguerCotxes xmlns="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.iessonferrer.net/jgonzalez/lloguerCotxes lloguer.xsd">
+
+<cotxe matricula="4256DRL">
+	<marca>Seat</marca>
+	<model>Alhambra</model>
+	<equipacio>
+		<climatitzador>Si</climatitzador>
+		<airbagsLaterals>Si</airbagsLaterals>
+		<automatic>No</automatic>
+		<cadiraNinPetit>Opcional</cadiraNinPetit>
+	</equipacio>
+</cotxe>
+
+<cotxe matricula="5258DRL">
+	<marca>Volkswagen</marca>
+	<model>Golf</model>
+	<color>Negre</color>
+	<equipacio>
+		<climatitzador>Opcional</climatitzador>
+		<airbagsLaterals>Si</airbagsLaterals>
+		<automatic>Si</automatic>
+		<cadiraNinPetit>No</cadiraNinPetit>
+	</equipacio>
+</cotxe>
+
+<client dni="42568525z">
+	<nom tractament="Sr">Antoni Pascual</nom>
+	<telefon>971230546</telefon>
+	<email>apascual@gmail.com</email>
+	<tipusClient>Premium</tipusClient>
+	<lloguer>
+		<cotxe>5258DRL</cotxe>
+		<dataInici>2016-03-12</dataInici>
+		<dataFi>2016-03-20</dataFi>
+	</lloguer>
+	<lloguer>
+		<cotxe>5258DRL</cotxe>
+		<dataInici>2016-04-12</dataInici>
+		<dataFi>2016-04-20</dataFi>
+	</lloguer>
+	<lloguer>
+		<cotxe>5258DRL</cotxe>
+		<dataInici>2016-05-12</dataInici>
+		<dataFi>2016-05-20</dataFi>
+	</lloguer>
+</client>
+
+<client dni="42568536l">
+	<nom tractament="Sra">Marta Soler</nom>
+	<telefon>971235685</telefon>
+	<email>psoler@gmail.com</email>
+	<tipusClient>Ocasional</tipusClient>
+	<lloguer>
+		<cotxe>4256DRL</cotxe>
+		<dataInici>2015-07-14</dataInici>
+		<dataFi>2015-07-21</dataFi>
+	</lloguer>
+</client>
+
+</lloguerCotxes>
