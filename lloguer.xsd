@@ -18,42 +18,35 @@ elementFormDefault="qualified">
 									<xsd:element name="airbagsLaterals" type="xsd:siOque" />
 									<xsd:element name="automatic" type="xsd:siOque" />
 									<xsd:element name="cadiraNinPetit" type="xsd:siOque" />
-								<xsd:simpleType name="siOque">
-									<xsd:restriction base="xsd:string">
-										<xsd:enumeration value="Si"/>
-										<xsd:enumeration value="No"/>
-										<xsd:enumeration value="Opcional"/>
-									</xsd:restriction>
-								</xsd:simpleType>
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
 					</xsd:sequence>
 				<xsd:attribute name="matricula" type="xsd:string" />
 				</xsd:complexType>
+				<xsd:simpleType name="siOque">
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Si"/>
+						<xsd:enumeration value="No"/>
+						<xsd:enumeration value="Opcional"/>
+					</xsd:restriction>
+				</xsd:simpleType>
 			</xsd:element>
-
 			<xsd:element name="client">
 				<xsd:complexType>
 					<xsd:sequence>
 						<xsd:element name="nom">
 							<xsd:complexType>
 							<xsd:attribute name="tractament" type="xsd:hombreMujer" use="required"/>
-								<xsd:simpleType name="hombreMujer">
-									<xsd:restriction base="xsd:string">
-										<xsd:enumeration value="Sr"/>
-										<xsd:enumeration value="Sra"/>
-									</xsd:restriction>
-								</xsd:simpleType>
 							</xsd:complexType>
 						</xsd:element>
 						<xsd:element name="telefon">
 							<xsd:simpleType>
-									<xsd:restriction base="xsd:integer">
-										<xsd:minInclusive value="971230000"/>
-										<xsd:maxInclusive value="971239999"/>
-									</xsd:restriction>
-								</xsd:simpleType>
+								<xsd:restriction base="xsd:integer">
+									<xsd:minInclusive value="971230000"/>
+									<xsd:maxInclusive value="971239999"/>
+								</xsd:restriction>
+							</xsd:simpleType>
 						</xsd:element>
 						<xsd:element name="email" type="xsd:string" />
 						<xsd:element name="tipusClient">
@@ -75,11 +68,17 @@ elementFormDefault="qualified">
 							</xsd:complexType>
 						</xsd:element>
 					</xsd:sequence>
-				<xsd:attribute name="dni" type="xsd:string" />
+					<xsd:attribute name="dni" type="xsd:string" />
 				</xsd:complexType>
-			</xsd:element>
-
+				<xsd:simpleType name="hombreMujer">
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Sr"/>
+						<xsd:enumeration value="Sra"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:elemnt>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:element>
+		
 </xsd:schema>
