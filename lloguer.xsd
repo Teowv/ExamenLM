@@ -76,7 +76,7 @@ elementFormDefault="qualified">
 						<xsd:enumeration value="Sra"/>
 					</xsd:restriction>
 				</xsd:simpleType>
-			</xsd:elemnt>
+			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:element>
